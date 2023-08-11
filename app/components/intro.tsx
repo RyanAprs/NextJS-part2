@@ -34,8 +34,8 @@ export default function Intro() {
                 </div>
             </div>
 
-            <motion.p 
-                className='mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-[1.3rem]'
+            <motion.h1
+                className='mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-[1.5rem]'
                 initial={{ opacity:0, y:100 }}
                 animate={{ opacity: 1, y:0 }}
             >
@@ -44,7 +44,7 @@ export default function Intro() {
                 <span className='font-bold'> Central Java, Indonesia</span> . I enjoy
                 building <span className="italic">sites & apps</span>. My focus is{" "}
                 <span className="underline">React (Next.js)</span>.
-            </motion.p>
+            </motion.h1>
 
             <motion.div 
                 className='flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium'
@@ -56,23 +56,27 @@ export default function Intro() {
             >
                 <Link 
                     href="#contact" 
-                    className='bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full'
+                    className='group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 hover:bg-gray-950 active:scale-105 transition'
                 >
-                    Contact me here <BsArrowRight /> 
+                    Contact me here <BsArrowRight className='opacity-70 group-hover:translate-x-1 transition' /> 
                 </Link>
+
                 <a 
-                    href=""
-                    className='bg-white text-gray-950 px-7 py-3 flex items-center gap-2 rounded-full'
+                    href="" download
+                    className='group bg-white text-gray-950 px-7 py-3 flex items-center gap-2 rounded-full  outline-none focus:scale-105 hover:scale-105 active:scale-105 transition cursor-pointer border border-black/10'
                 >
-                    Download CV <HiDownload />
+                    Download CV <HiDownload className='opacity-60 group-hover:translate-y-1 transition' />
                 </a>
-                <a href="" className='bg-white text-gray-700 text-[1.35rem] p-4 flex items-center gap-2 rounded-full'>
+
+                <a href="https://www.linkedin.com/in/ryan-adi-prasetyo/" target='_blank' className='bg-white text-gray-700 text-[1.35rem] p-4 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10'>
                     <BsLinkedin />
                 </a>
-                <a href="" className='bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full'> 
+
+                <a href="https://github.com/RyanAprs" target='_blank' className='bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10'> 
                     <BsGithub />
                 </a>
+
             </motion.div>
         </section>
-    )
-}
+    );
+};
